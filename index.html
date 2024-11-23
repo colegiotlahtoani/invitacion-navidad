@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,61 +7,96 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <img src="logo_festival.png" alt="Logo del Festival" class="logo">
-            <h1>¡Festival Navideño 2024!</h1>
-            <p class="tagline">Feliz Navidad, ¡vive la magia y comparte la alegría!</p>
-        </header>
+    <header class="hero fade-in" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 15px 5px; text-align: center;">
+        <img src="logo_festival.png" alt="Logo Tlahtoani" class="logo" style="width: 200px; margin-bottom: 2px;"> <!-- Espaciado reducido -->
+        <h1 style="font-size: 1.2rem; margin: 2px 0;">¡Festival Navideño 2024!</h1> <!-- Márgenes más pequeños -->
+        <p style="font-size: 0.9rem; margin: 2px 0;">Feliz Navidad, vive la magia y comparte la alegría.</p> <!-- Compactación adicional -->
+    </header>
 
-        <section class="hero">
-            <img src="imagen_festival.jpg" alt="Festival Navideño" class="hero-image">
-        </section>
+    <!-- Galería Navideña -->
+    <section class="section slide-up" id="gallery">
+        <h2>Galería Navideña</h2>
+        <div class="gallery">
+            <video controls class="gallery-item">
+                <source src="nananana utututut.MOV" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+            <img src="IMG_6823.jpg" alt="Galería 1">
+            <img src="imagen_festival.jpg" alt="Galería 2">
+        </div>
+    </section>
 
-        <section class="details">
-            <h2>Detalles del Evento</h2>
-            <div class="info-card">
-                <p class="date"><strong>📅 Fecha:</strong> 13 de diciembre, 2024</p>
-                <p class="time"><strong>🕒 Horarios:</strong></p>
-                <ul>
-                    <li>03:00 PM - Kinder</li>
-                    <li>05:00 PM - Primaria</li>
-                </ul>
-                <p class="location"><strong>📍 Lugar:</strong></p>
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.0654412179517!2d-103.33092352522544!3d20.660012885975577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b1dbe18d8825%3A0xfeb125dce60f6585!2sCentro%20de%20Desarrollo%20Comunitario%20DIF%20Guadalajara!5e0!3m2!1ses!2smx!4v1699760457895!5m2!1ses!2smx" 
-                    width="100%" 
-                    height="300" 
-                    style="border:0; border-radius: 10px;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
+    <!-- Detalles del Evento -->
+    <section class="section fade-in" id="details">
+        <h2>Detalles del Evento</h2>
+        <div class="info-card">
+            <p><strong>Fecha:</strong> 13 de diciembre, 2024</p>
+            <p><strong>Hora:</strong> 03:00 PM - Kinder | 05:00 PM - Primaria</p>
+            <p><strong>Lugar:</strong> Centro de Desarrollo Comunitario #25, DIF Guadalajara, Avenida Patria, El Sauz, Guadalajara, Jalisco, México</p>
+            <!-- Mapa embebido -->
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.199134937459!2d-103.33945648457622!3d20.704265102278436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b28b90e0c2e7%3A0x4635e2b3084764da!2sCentro%20de%20Desarrollo%20Comunitario%20DIF!5e0!3m2!1ses-419!2smx!4v1693315237993!5m2!1ses-419!2smx"
+                    width="100%"
+                    height="200"
+                    style="border:0; border-radius: 10px;"
+                    allowfullscreen=""
+                    loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
-                <a href="https://maps.app.goo.gl/7VtN3DXwzsiw97Yw9?g_st=com.google.maps.preview.copy" class="map-link" target="_blank">Ver en Google Maps</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="access">
-            <h2 class="access-title">🎟 Acceso al Festival</h2>
-            <div class="access-box">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <p><strong>Recibe tus boletos:</strong> Después del link de esta invitación enviado por WhatsApp, recibirás <strong>dos boletos QR</strong> por alumno. Los boletos adicionales ($120) pueden adquirirse en el colegio.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <p><strong>Escanea y guarda tus boletos:</strong> Escanea los códigos QR antes del evento para generar los boletos digitales con su <strong>ID único</strong>.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <p><strong>Presenta tu boleto digital:</strong> Llega con el boleto ya escaneado y muestra el <strong>ID válido</strong> en la entrada. <strong>Sin un ID válido o repetido, no habrá acceso.</strong></p>
-                </div>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <p>✨ ¡Feliz Navidad y Próspero Año Nuevo! ✨</p>
-        </footer>
+  <!-- Acceso al Festival -->
+<section class="section" id="access">
+    <h2>Acceso al Festival</h2>
+    <div class="access-box">
+        <div class="step">
+            <div class="step-number">1</div>
+            <p><strong>Recibe tus boletos:</strong><br> Recibirás dos códigos QR por alumno.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <p><strong>Escanea y guarda tu boleto:</strong><br> Escanea los códigos QR antes del evento para generar un ID único que será tu acceso.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <p><strong>Presenta tu ID en la entrada del evento:</strong><br> Muestra tu ID válido en la entrada para tener acceso.</p>
+        </div>
     </div>
+</section>
+
+
+    <!-- Contador Navideño (Movido al final) -->
+    <section class="section fade-in" id="countdown">
+        <h2 class="countdown-title">Cuenta Regresiva para el Festival</h2>
+        <div class="countdown-box">
+            <div id="timer" class="timer-flex">
+                <div class="time-unit">
+                    <span id="days">00</span>
+                    <p>Días</p>
+                </div>
+                <div class="time-unit">
+                    <span id="hours">00</span>
+                    <p>Horas</p>
+                </div>
+                <div class="time-unit">
+                    <span id="minutes">00</span>
+                    <p>Minutos</p>
+                </div>
+                <div class="time-unit">
+                    <span id="seconds">00</span>
+                    <p>Segundos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>¡Te esperamos con mucha alegría en el Festival Navideño!</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
