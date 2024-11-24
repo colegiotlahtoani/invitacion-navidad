@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación Festival Navideño</title>
+    <title>LOCAL HOST</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Librería AOS para animaciones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
     <style>
         /* Ajuste de texto consistente entre dispositivos */
         html {
@@ -37,14 +39,17 @@
     </style>
 </head>
 <body>
-    <header class="hero fade-in" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 15px 5px; text-align: center;">
+    <header class="hero fade-in" 
+        data-aos="fade-down" 
+        data-aos-duration="1000"
+        style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 15px 5px; text-align: center;">
         <img src="logo_festival.png" alt="Logo Tlahtoani" class="logo" style="width: 200px; margin-bottom: 2px;"> <!-- Espaciado reducido -->
         <h1 style="font-size: 1.2rem; margin: 2px 0;">¡Festival Navideño 2024!</h1> <!-- Márgenes más pequeños -->
         <p style="font-size: 0.9rem; margin: 2px 0;">Feliz Navidad, vive la magia y comparte la alegría.</p> <!-- Compactación adicional -->
     </header>
 
     <!-- Galería Navideña -->
-    <section class="section slide-up" id="gallery">
+    <section class="section slide-up" id="gallery" data-aos="fade-up" data-aos-duration="1000">
         <h2>Galería Navideña</h2>
         <div class="gallery">
             <img src="IMG_6823.jpg" alt="Galería 1">
@@ -53,7 +58,7 @@
     </section>
 
     <!-- Detalles del Evento -->
-    <section class="section fade-in" id="details">
+    <section class="section fade-in" id="details" data-aos="fade-up" data-aos-duration="1000">
         <h2>Detalles del Evento</h2>
         <div class="info-card">
             <p><strong>Fecha:</strong> 13 de diciembre, 2024</p>
@@ -78,7 +83,7 @@
     </section>
 
     <!-- Acceso al Festival -->
-    <section class="section" id="access">
+    <section class="section" id="access" data-aos="fade-right" data-aos-duration="1000">
         <h2>Acceso al Festival</h2>
         <div class="access-box">
             <div class="step">
@@ -97,7 +102,7 @@
     </section>
 
     <!-- Contador Navideño -->
-    <section class="section fade-in" id="countdown">
+    <section class="section fade-in" id="countdown" data-aos="zoom-in" data-aos-duration="1000">
         <h2 class="countdown-title">Cuenta Regresiva para el Festival</h2>
         <div class="countdown-box">
             <div id="timer" class="timer-flex">
@@ -121,10 +126,17 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <!-- Footer sin animación -->
+    <footer class="footer no-animation">
         <p>¡Te esperamos con mucha alegría en el Festival Navideño!</p>
     </footer>
 
+    <!-- Librería AOS para animaciones -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar AOS
+        AOS.init();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
