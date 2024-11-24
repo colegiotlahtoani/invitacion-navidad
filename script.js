@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Animación de escritura dinámica más rápida
+    // 1. Animación de escritura dinámica en el título
     const title = document.querySelector("header.hero h1");
     const text = title.textContent;
     title.textContent = "";
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (i === text.length) clearInterval(typeEffect);
     }, 80);
 
-    // 2. Efectos en los títulos con colores fijos
+    // 2. Efectos en los títulos con colores y subrayado animado
     const titles = [
         { selector: "#gallery h2", color: "#b30000" }, // Rojo
         { selector: "#details h2", color: "#ffcc00" }, // Amarillo
@@ -21,10 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     titles.forEach(({ selector, color }) => {
         const element = document.querySelector(selector);
         if (element) {
-            // Asignar color fijo
             element.style.color = color;
-
-            // Efecto de subrayado animado
             element.style.position = "relative";
             element.style.overflow = "hidden";
             const underline = document.createElement("div");
@@ -36,39 +33,30 @@ document.addEventListener("DOMContentLoaded", () => {
             underline.style.backgroundColor = color;
             underline.style.transition = "all 0.5s ease-out";
             element.appendChild(underline);
-
             setTimeout(() => {
                 underline.style.left = "0";
             }, 300);
         }
     });
 
-    // 3. Agregar efecto de transición en el scroll (fade-in y slide-up)
-    const elementsToFade = document.querySelectorAll(".fade-in");
-    const elementsToSlide = document.querySelectorAll(".slide-up");
+    // 3. Animaciones al desplazarse (fade-in y slide-up) excluyendo no-animation
+    const elementsToAnimate = document.querySelectorAll(
+        ".fade-in:not(.no-animation), .slide-up:not(.no-animation)"
+    );
 
-    const checkVisibility = () => {
+    const handleScrollAnimation = () => {
         const windowHeight = window.innerHeight;
-        const scrollTop = window.scrollY;
-
-        elementsToFade.forEach((element) => {
-            const elementTop = element.getBoundingClientRect().top + scrollTop;
-            if (elementTop - windowHeight <= scrollTop) {
-                element.classList.add("visible");
-            }
-        });
-
-        elementsToSlide.forEach((element) => {
-            const elementTop = element.getBoundingClientRect().top + scrollTop;
-            if (elementTop - windowHeight <= scrollTop) {
-                element.classList.add("visible");
+        elementsToAnimate.forEach((element) => {
+            const elementTop = element.getBoundingClientRect().top;
+            if (elementTop < windowHeight - 50) {
+                element.classList.add("show");
             }
         });
     };
 
-    // Verifica la visibilidad de los elementos al cargar y al hacer scroll
-    checkVisibility();
-    window.addEventListener("scroll", checkVisibility);
+    // Llama la función al cargar la página y al hacer scroll
+    handleScrollAnimation();
+    window.addEventListener("scroll", handleScrollAnimation);
 
     // 4. Contador Navideño
     const eventDate = new Date("2024-12-13T15:00:00").getTime();
