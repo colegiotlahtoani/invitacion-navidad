@@ -214,23 +214,96 @@ header.hero {
 
 /* Contador Navideño */
 .countdown-box {
-    display: flex; /* Diseño horizontal */
-    justify-content: center; /* Centramos los elementos */
-    align-items: center;
-    gap: 30px; /* Espaciado entre los bloques */
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 15px; /* Espaciado entre los bloques */
     padding: 20px;
-    background: #e1ffe1; /* Fondo verde claro */
-    border: 4px dashed #b30000; /* Borde rojo */
+    background: #e1ffe1;
+    border: 4px dashed #b30000;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    max-width: 100%; /* Asegura que no se desborde */
+    overflow: hidden; /* Evita desbordamientos */
 }
 
 .timer-flex {
     display: flex;
+    flex-wrap: wrap; /* Diseño adaptable para dispositivos pequeños */
     justify-content: center;
-    gap: 20px; /* Espaciado entre los bloques */
+    gap: 10px;
+    width: 100%; /* Asegura que ocupe todo el ancho */
 }
+
+/* Bloques individuales del contador */
+.time-unit {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #b30000;
+    padding: 10px;
+    border: 2px solid #ffcc00;
+    border-radius: 5px;
+    width: 80px; /* Ajuste del ancho para pantallas pequeñas */
+    background: #fff;
+    box-sizing: border-box; /* Incluye bordes y relleno dentro del ancho */
+}
+
+.time-unit span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #b30000;
+}
+
+.time-unit p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #008000;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .countdown-box {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .time-unit {
+        width: 70px; /* Reduce el ancho para ajustarse a pantallas pequeñas */
+        font-size: 1rem;
+    }
+
+    .time-unit span {
+        font-size: 1.5rem; /* Reduce el tamaño del texto */
+    }
+
+    .time-unit p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .countdown-box {
+        padding: 5px;
+        gap: 5px;
+    }
+
+    .time-unit {
+        width: 60px; /* Más pequeño para dispositivos muy pequeños */
+        font-size: 0.9rem;
+    }
+
+    .time-unit span {
+        font-size: 1.2rem;
+    }
+
+    .time-unit p {
+        font-size: 0.8rem;
+    }
+}
+
 
 /* Título de la Cuenta Regresiva */
 section#countdown .countdown-title {
