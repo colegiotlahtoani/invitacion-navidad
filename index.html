@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación Festival Navideño</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ajuste de texto consistente entre dispositivos */
+        html {
+            font-size: 16px; /* Tamaño base uniforme */
+        }
+
+        body {
+            font-size: 1rem; /* Relativo al tamaño base */
+            -webkit-text-size-adjust: 100%; /* Para iOS */
+            text-size-adjust: 100%; /* Para otros navegadores */
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        /* Escalado opcional para pantallas pequeñas */
+        @media (max-width: 768px) {
+            html {
+                font-size: 16px; /* Mantén el tamaño base en pantallas medianas */
+            }
+        }
+
+        @media (max-width: 480px) {
+            html {
+                font-size: 16px; /* Igual para pantallas pequeñas */
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="hero fade-in" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 15px 5px; text-align: center;">
@@ -17,65 +47,56 @@
     <section class="section slide-up" id="gallery">
         <h2>Galería Navideña</h2>
         <div class="gallery">
-            <video controls class="gallery-item">
-                <source src="nananana utututut.MOV" type="video/mp4">
-                Tu navegador no soporta la reproducción de videos.
-            </video>
             <img src="IMG_6823.jpg" alt="Galería 1">
             <img src="imagen_festival.jpg" alt="Galería 2">
         </div>
     </section>
 
-<!-- Detalles del Evento -->
-<section class="section fade-in" id="details">
-    <h2>Detalles del Evento</h2>
-    <div class="info-card">
-        <p><strong>Fecha:</strong> 13 de diciembre, 2024</p>
-        <p><strong>Hora:</strong> 03:00 PM - Kinder | 05:00 PM - Primaria</p>
-        <p><strong>Lugar:</strong> Centro de Desarrollo Comunitario #25, DIF Guadalajara, Avenida Patria, El Sauz, Guadalajara, Jalisco, México</p>
-        
-        <!-- Imagen del mapa y enlace -->
-        <div class="map-container" style="text-align: center; margin-top: 15px;">
-            <!-- Imagen del mapa -->
-            <a href="https://maps.app.goo.gl/Q6nx3twiyeCMZEDT9?g_st=com.google.maps.preview.copy" target="_blank">
-                <img
-                    src="mapa-ubicacion.png"
-                    alt="Mapa de ubicación"
-                    style="border-radius: 10px; cursor: pointer; width: 200px; height: auto; display: inline-block;">
-            </a>
-            <!-- Enlace rojo debajo -->
-            <a href="https://maps.app.goo.gl/Q6nx3twiyeCMZEDT9?g_st=com.google.maps.preview.copy" target="_blank" style="color: red; text-decoration: underline; font-weight: bold; display: block; margin-top: 10px;">
-                Abrir en Google Maps
-            </a>
+    <!-- Detalles del Evento -->
+    <section class="section fade-in" id="details">
+        <h2>Detalles del Evento</h2>
+        <div class="info-card">
+            <p><strong>Fecha:</strong> 13 de diciembre, 2024</p>
+            <p><strong>Hora:</strong> 03:00 PM - Kinder | 05:00 PM - Primaria</p>
+            <p><strong>Lugar:</strong> Centro de Desarrollo Comunitario #25, DIF Guadalajara, Avenida Patria, El Sauz, Guadalajara, Jalisco, México</p>
+            
+            <!-- Imagen del mapa y enlace -->
+            <div class="map-container" style="text-align: center; margin-top: 15px;">
+                <!-- Imagen del mapa -->
+                <a href="https://maps.app.goo.gl/Q6nx3twiyeCMZEDT9?g_st=com.google.maps.preview.copy" target="_blank">
+                    <img
+                        src="mapa-ubicacion.png"
+                        alt="Mapa de ubicación"
+                        style="border-radius: 10px; cursor: pointer; width: 200px; height: auto; display: inline-block;">
+                </a>
+                <!-- Enlace rojo debajo -->
+                <a href="https://maps.app.goo.gl/Q6nx3twiyeCMZEDT9?g_st=com.google.maps.preview.copy" target="_blank" style="color: red; text-decoration: underline; font-weight: bold; display: block; margin-top: 10px;">
+                    Abrir en Google Maps
+                </a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-
-
-
-
-  <!-- Acceso al Festival -->
-<section class="section" id="access">
-    <h2>Acceso al Festival</h2>
-    <div class="access-box">
-        <div class="step">
-            <div class="step-number">1</div>
-            <p><strong>Recibe tus boletos:</strong><br> Recibirás dos códigos QR por alumno.</p>
+    <!-- Acceso al Festival -->
+    <section class="section" id="access">
+        <h2>Acceso al Festival</h2>
+        <div class="access-box">
+            <div class="step">
+                <div class="step-number">1</div>
+                <p><strong>Recibe tus boletos:</strong><br> Recibirás dos códigos QR por alumno.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <p><strong>Escanea y guarda tu boleto:</strong><br> Escanea los códigos QR antes del evento para generar un ID único que será tu acceso.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <p><strong>Presenta tu ID en la entrada del evento:</strong><br> Muestra tu ID válido en la entrada para tener acceso.</p>
+            </div>
         </div>
-        <div class="step">
-            <div class="step-number">2</div>
-            <p><strong>Escanea y guarda tu boleto:</strong><br> Escanea los códigos QR antes del evento para generar un ID único que será tu acceso.</p>
-        </div>
-        <div class="step">
-            <div class="step-number">3</div>
-            <p><strong>Presenta tu ID en la entrada del evento:</strong><br> Muestra tu ID válido en la entrada para tener acceso.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-
-    <!-- Contador Navideño (Movido al final) -->
+    <!-- Contador Navideño -->
     <section class="section fade-in" id="countdown">
         <h2 class="countdown-title">Cuenta Regresiva para el Festival</h2>
         <div class="countdown-box">
