@@ -211,39 +211,29 @@ header.hero {
     letter-spacing: 1px;
 }
 
-/* Contador Navideño */
+/* Contador Navideño vertical */
 .countdown-box {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
-    justify-content: center; /* Centra los elementos horizontalmente */
-    gap: 15px; /* Espaciado entre los bloques */
-    padding: 20px;
+    flex-direction: column; /* Cambia a disposición vertical */
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 10px; /* Espaciado entre los bloques */
+    padding: 10px;
     background: #e1ffe1;
     border: 4px dashed #b30000;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-    max-width: 100%; /* Asegura que no se desborde */
-    overflow: hidden; /* Evita desbordamientos */
+    max-width: 200px; /* Ajusta el ancho total */
+    margin: auto; /* Centra el contador */
 }
 
-.timer-flex {
-    display: flex;
-    flex-wrap: wrap; /* Diseño adaptable para dispositivos pequeños */
-    justify-content: center;
-    gap: 10px;
-    width: 100%; /* Asegura que ocupe todo el ancho */
-}
-
-/* Bloques individuales del contador */
 .time-unit {
     text-align: center;
-    font-size: 2rem; /* Incrementa el tamaño del texto */
+    font-size: 1.5rem; /* Reduce el tamaño del texto */
     color: #b30000;
-    padding: 20px; /* Incrementa el espacio interno */
+    padding: 10px; /* Reduce el espacio interno */
     border: 2px solid #ffcc00;
     border-radius: 5px;
-    width: 120px; /* Ancho uniforme */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
     background: #fff;
     box-sizing: border-box;
 
@@ -256,58 +246,37 @@ header.hero {
 
 .time-unit span {
     display: block;
-    font-size: 2.5rem; /* Incrementa el tamaño de los números */
+    font-size: 2rem; /* Ajusta el tamaño de los números */
     font-weight: bold;
     color: #b30000;
 }
 
 .time-unit p {
     margin: 5px 0 0;
-    font-size: 1.2rem; /* Ajusta el tamaño del texto descriptivo */
+    font-size: 1rem; /* Ajusta el tamaño del texto descriptivo */
     font-weight: bold;
     color: #008000;
 }
 
 /* Media Queries para pantallas pequeñas */
-@media (max-width: 768px) {
-    .countdown-box {
-        padding: 10px;
-        gap: 10px;
-    }
-
-    .time-unit {
-        width: 100px; /* Ajusta el ancho para pantallas medianas */
-        font-size: 1.5rem;
-    }
-
-    .time-unit span {
-        font-size: 2rem; /* Ajusta el tamaño del texto */
-    }
-
-    .time-unit p {
-        font-size: 1rem;
-    }
-}
-
 @media (max-width: 480px) {
     .countdown-box {
-        padding: 5px;
-        gap: 5px;
+        max-width: 150px; /* Reduce el ancho para pantallas pequeñas */
     }
 
     .time-unit {
-        width: 90px; /* Ajusta el ancho para pantallas pequeñas */
-        font-size: 1.2rem;
+        padding: 5px; /* Reduce aún más el espacio interno */
     }
 
     .time-unit span {
-        font-size: 1.8rem;
+        font-size: 1.5rem; /* Reduce el tamaño del texto */
     }
 
     .time-unit p {
-        font-size: 0.9rem;
+        font-size: 0.8rem; /* Ajusta el tamaño del texto descriptivo */
     }
 }
+
 
 /* Título de la Cuenta Regresiva */
 section#countdown .countdown-title {
@@ -345,4 +314,3 @@ section#access h2 {
 section#countdown h2 {
     color: #ff0000; /* Rojo vibrante para el contador */
 }
-
