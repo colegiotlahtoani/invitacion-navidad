@@ -186,7 +186,6 @@ header.hero {
     text-align: left; /* Alineación del texto hacia la izquierda */
 }
 
-
 /* Animación de pulsación */
 @keyframes pulse {
     0%, 100% {
@@ -239,26 +238,32 @@ header.hero {
 /* Bloques individuales del contador */
 .time-unit {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem; /* Incrementa el tamaño del texto */
     color: #b30000;
-    padding: 10px;
+    padding: 20px; /* Incrementa el espacio interno */
     border: 2px solid #ffcc00;
     border-radius: 5px;
-    width: 80px; /* Ajuste del ancho para pantallas pequeñas */
+    width: 120px; /* Ancho uniforme */
     background: #fff;
-    box-sizing: border-box; /* Incluye bordes y relleno dentro del ancho */
+    box-sizing: border-box;
+
+    /* Centrado vertical y horizontal */
+    display: flex;
+    flex-direction: column; /* Elementos en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
 }
 
 .time-unit span {
     display: block;
-    font-size: 2rem;
+    font-size: 2.5rem; /* Incrementa el tamaño de los números */
     font-weight: bold;
     color: #b30000;
 }
 
 .time-unit p {
     margin: 5px 0 0;
-    font-size: 1rem;
+    font-size: 1.2rem; /* Ajusta el tamaño del texto descriptivo */
     font-weight: bold;
     color: #008000;
 }
@@ -271,16 +276,16 @@ header.hero {
     }
 
     .time-unit {
-        width: 70px; /* Reduce el ancho para ajustarse a pantallas pequeñas */
-        font-size: 1rem;
+        width: 100px; /* Ajusta el ancho para pantallas medianas */
+        font-size: 1.5rem;
     }
 
     .time-unit span {
-        font-size: 1.5rem; /* Reduce el tamaño del texto */
+        font-size: 2rem; /* Ajusta el tamaño del texto */
     }
 
     .time-unit p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 }
 
@@ -291,19 +296,18 @@ header.hero {
     }
 
     .time-unit {
-        width: 60px; /* Más pequeño para dispositivos muy pequeños */
-        font-size: 0.9rem;
-    }
-
-    .time-unit span {
+        width: 90px; /* Ajusta el ancho para pantallas pequeñas */
         font-size: 1.2rem;
     }
 
+    .time-unit span {
+        font-size: 1.8rem;
+    }
+
     .time-unit p {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 }
-
 
 /* Título de la Cuenta Regresiva */
 section#countdown .countdown-title {
@@ -331,7 +335,7 @@ section#gallery h2 {
 }
 
 section#details h2 {
-    color: #ffcc00; /* Amarillo */
+    color: #ffea00; /* Amarillo muy fuerte */
 }
 
 section#access h2 {
@@ -342,48 +346,3 @@ section#countdown h2 {
     color: #ff0000; /* Rojo vibrante para el contador */
 }
 
-/* Bloques de la cuenta regresiva */
-.time-unit {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #b30000;
-    padding: 10px;
-    border: 2px solid #ffcc00;
-    border-radius: 5px;
-    width: 80px;
-    background: #fff;
-}
-
-.time-unit span {
-    display: block;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #b30000;
-}
-
-.time-unit p {
-    margin: 5px 0 0;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #008000;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .countdown-box {
-        flex-wrap: wrap; /* Diseño vertical en pantallas pequeñas */
-        gap: 15px;
-    }
-
-    .time-unit {
-        width: 70px;
-    }
-
-    .time-unit span {
-        font-size: 1.5rem;
-    }
-
-    .time-unit p {
-        font-size: 0.9rem;
-    }
-}
