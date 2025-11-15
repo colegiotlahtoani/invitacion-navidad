@@ -19,6 +19,7 @@
             --dorado: #f7d774;
             --crema: #fff9e6;
             --azul-noche: #001b33;
+            --verde-navidad: #0f3d0f;
         }
 
         body {
@@ -298,19 +299,32 @@
             font-size: 1.1rem;
         }
 
-        /* Footer */
+        /* Footer MEJORADO */
         .footer {
-            padding: 30px 15px;
-            background: rgba(0,0,0,0.8);
+            padding: 40px 15px;
+            background: linear-gradient(135deg, rgba(15, 61, 15, 0.9), rgba(183, 0, 0, 0.7));
             text-align: center;
             margin-top: 25px;
-            border-top: 1px solid rgba(247,215,116,0.2);
+            border-top: 3px solid var(--dorado);
         }
         .footer-text {
-            font-size: 0.85rem;
-            opacity: 0.8;
-            line-height: 1.4;
-            margin-bottom: 8px;
+            font-size: 1rem;
+            opacity: 0.9;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .footer-year {
+            font-size: 1.2rem;
+            color: var(--dorado);
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .footer-highlight {
+            font-size: 1.1rem;
+            color: var(--dorado);
+            font-weight: bold;
+            margin-top: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         /* Responsive para tablets */
@@ -501,10 +515,11 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER MEJORADO -->
     <footer class="footer">
-        <p class="footer-text">Festival Navideño Tlahtoani 2024</p>
-        <p class="footer-text" style="margin-top: 10px; color: var(--dorado);">
+        <div class="footer-year">Festival Navideño Tlahtoani 2025</div>
+        <p class="footer-text">Una celebración creada para compartir la magia de la Navidad</p>
+        <p class="footer-highlight">
             ¡Te esperamos en Kinder Tlahtoani!
         </p>
     </footer>
