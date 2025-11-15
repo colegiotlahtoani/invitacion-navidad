@@ -210,7 +210,7 @@
             font-weight: bold;
         }
 
-        /* Sección de alimentos */
+        /* Sección de alimentos MEJORADA */
         .food-section {
             background: rgba(183, 0, 0, 0.1);
             border: 2px solid var(--rojo-navidad);
@@ -219,37 +219,40 @@
             margin: 25px 0;
             position: relative;
         }
+        .sale-header {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
         .sale-badge {
-            position: absolute;
-            top: 12px;
-            right: 12px;
             background: var(--rojo-navidad);
             color: white;
-            padding: 5px 10px;
-            border-radius: 12px;
+            padding: 8px 16px;
+            border-radius: 20px;
             font-weight: bold;
-            font-size: 0.75rem;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 10px;
         }
         .food-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            margin-top: 15px;
+            gap: 15px;
         }
         .food-item {
             text-align: center;
-            padding: 15px 8px;
+            padding: 20px 10px;
             background: rgba(255, 255, 255, 0.08);
             border: 1px solid rgba(247,215,116,0.2);
-            border-radius: 10px;
+            border-radius: 12px;
         }
         .food-icon {
-            font-size: 1.6rem;
-            margin-bottom: 8px;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
             color: var(--dorado);
         }
         .food-name {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: 600;
             color: var(--crema);
         }
@@ -362,12 +365,18 @@
         </div>
     </section>
 
-    <!-- ACTIVIDADES INCLUIDAS -->
+    <!-- ACTIVIDADES INCLUIDAS - ACTUALIZADA -->
     <section class="section">
         <div class="event-content">
             <h2 class="section-title">Actividades del Evento</h2>
             
             <div class="grid">
+                <div class="card">
+                    <i class="fas fa-theater-masks" style="font-size: 2.5rem; color: var(--dorado); margin-bottom: 15px;"></i>
+                    <h3 style="color: var(--dorado); margin-bottom: 10px;">Cuentacuentos</h3>
+                    <p>Espectáculo profesional con narración y música en vivo</p>
+                </div>
+                
                 <div class="card">
                     <i class="fas fa-music" style="font-size: 2.5rem; color: var(--dorado); margin-bottom: 15px;"></i>
                     <h3 style="color: var(--dorado); margin-bottom: 10px;">Villancicos</h3>
@@ -389,16 +398,16 @@
         </div>
     </section>
 
-    <!-- ALIMENTOS DISPONIBLES -->
+    <!-- ALIMENTOS DISPONIBLES - MEJORADA -->
     <section class="section">
         <div class="event-content">
             <h2 class="section-title">Alimentos y Bebidas</h2>
             
             <div class="food-section">
-                <div class="sale-badge">VENTA</div>
-                <p style="text-align: center; margin-bottom: 15px; opacity: 0.9;">
-                    Disponibles durante el evento
-                </p>
+                <div class="sale-header">
+                    <div class="sale-badge">EN VENTA DURANTE EL EVENTO</div>
+                    <p style="opacity: 0.9; margin: 0;">Deliciosos manjares navideños disponibles</p>
+                </div>
                 
                 <div class="food-grid">
                     <div class="food-item">
