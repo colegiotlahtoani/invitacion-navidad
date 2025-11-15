@@ -134,11 +134,14 @@
             overflow: hidden;
             box-shadow: 0 8px 20px rgba(0,0,0,0.4);
             border: 2px solid var(--dorado);
+            width: 100%;
         }
         .event-image img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            display: block;
         }
         .event-video {
             border-radius: 15px;
@@ -319,6 +322,9 @@
             .features-grid { flex-direction: row; }
             .food-grid { grid-template-columns: repeat(5, 1fr); }
             .info-grid { flex-direction: row; }
+            .event-image img {
+                max-height: 500px;
+            }
         }
 
         /* Mejoras para pantallas muy pequeñas */
@@ -326,6 +332,9 @@
             .hero h1 { font-size: 1.8rem; }
             .section { padding: 30px 10px; }
             .food-grid { grid-template-columns: 1fr; }
+            .event-image img {
+                max-height: 300px;
+            }
         }
     </style>
 </head>
@@ -347,7 +356,7 @@
             
             <div class="event-media">
                 <div class="event-image">
-                    <img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cuentacuentos Navideño">
+                    <img src="21_CUENTOS_INF-1.jpg" alt="Espectáculo de Cuentacuentos Navideño - Cuentacuentos GDL">
                 </div>
                 
                 <div class="event-video">
