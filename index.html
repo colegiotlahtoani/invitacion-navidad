@@ -64,10 +64,14 @@
             position: relative;
             z-index: 2;
         }
+        .hero-content {
+            max-width: 800px;
+        }
         .hero h1 {
             font-size: 2.5rem;
             color: var(--dorado);
             text-shadow: 0 0 12px rgba(0,0,0,0.7);
+            margin-bottom: 20px;
         }
         .hero p {
             font-size: 1.2rem;
@@ -94,6 +98,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 20px;
+            margin-top: 30px;
         }
         .gallery-item {
             overflow: hidden;
@@ -150,49 +155,141 @@
             margin-top: 40px;
         }
         .footer .heart { color: var(--rojo-navidad); }
+
+        /* Información de invitación */
+        .invitation-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .invitation-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+        .food-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .food-item {
+            padding: 15px;
+        }
+        .food-item i {
+            font-size: 2rem;
+            color: var(--dorado);
+            margin-bottom: 10px;
+        }
+
         /* Mobile-first adjustments */
-    @media (max-width: 600px) {
-        .hero h1 { font-size: 2rem; }
-        .hero p { font-size: 1rem; }
-        .section h2 { font-size: 1.6rem; }
-        .gallery-item img { height: 160px; }
-    }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .section h2 { font-size: 1.6rem; }
+            .gallery-item img { height: 160px; }
+            .invitation-text { font-size: 1.1rem; }
+        }
 
-    /* Elegancia añadida */
-    body {
-        background: radial-gradient(circle at top, #032b52, #00111f 70%);
-    }
-    .info-card, .activity-card, .food-item, .countdown-box, .step {
-        border: 1px solid rgba(247,215,116,0.35);
-        background: rgba(255,255,255,0.06);
-        box-shadow: 0 12px 30px rgba(0,0,0,0.5);
-        backdrop-filter: blur(10px);
-    }
-    .gallery-item {
-        border: 1px solid rgba(247,215,116,0.5);
-        border-radius: 18px;
-    }
-
-</style>
+        /* Elegancia añadida */
+        body {
+            background: radial-gradient(circle at top, #032b52, #00111f 70%);
+        }
+        .info-card, .activity-card, .food-item, .countdown-box, .step {
+            border: 1px solid rgba(247,215,116,0.35);
+            background: rgba(255,255,255,0.06);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+        }
+        .gallery-item {
+            border: 1px solid rgba(247,215,116,0.5);
+            border-radius: 18px;
+        }
+    </style>
 </head>
 <body>
     <div class="snowflakes" id="snowflakes"></div>
 
     <header class="hero" style="backdrop-filter: blur(4px); border-bottom: 1px solid rgba(247,215,116,0.25);">
-        <div>
+        <div class="hero-content">
             <h1>Festival Navideño Tlahtoani</h1>
             <p>Una celebración llena de <span class="highlight">alegría</span>, <span class="highlight">música</span> y <span class="highlight">sabor navideño</span>.</p>
         </div>
     </header>
 
-    <section class="section" id="gallery">
-        <h2>Galería Navideña</h2>
-        <div class="gallery">
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1574473327928-9647485cc990"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1577208285973-75b376f61cdb"></div>
+    <section class="section" id="invitation">
+        <div class="invitation-content">
+            <h2>¡Te Invitamos!</h2>
+            <div class="invitation-text">
+                <p><strong>Invitación Festival Navideño Tlahtoani</strong></p>
+                <p>Ven vive una navidad especial con este show increíble</p>
+                <p>Veremos a nuestros alumnos cantar villancicos</p>
+                <p>Y podrás disfrutar de rico ponche y además...</p>
+            </div>
+            
+            <h3>Ven, habrá venta de:</h3>
+            <div class="food-grid">
+                <div class="food-item">
+                    <i class="fas fa-utensils"></i>
+                    <h4>Tamales</h4>
+                </div>
+                <div class="food-item">
+                    <i class="fas fa-mug-hot"></i>
+                    <h4>Atole</h4>
+                </div>
+                <div class="food-item">
+                    <i class="fas fa-cookie"></i>
+                    <h4>Buñuelos</h4>
+                </div>
+                <div class="food-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h4>Pastel</h4>
+                </div>
+                <div class="food-item">
+                    <i class="fas fa-coffee"></i>
+                    <h4>Capuchino</h4>
+                </div>
+            </div>
         </div>
     </section>
 
+    <section class="section" id="gallery">
+        <h2>Galería Navideña</h2>
+        <div class="gallery">
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1574473327928-9647485cc990" alt="Decoración navideña"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574" alt="Celebración navideña"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1577208285973-75b376f61cdb" alt="Ambiente festivo"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 Festival Navideño Tlahtoani - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        // Crear efecto de nieve
+        function createSnow() {
+            const snowflakes = document.getElementById('snowflakes');
+            const snowflakeCount = 50;
+            
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.innerHTML = '❄';
+                snowflake.style.left = Math.random() * 100 + 'vw';
+                snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                snowflake.style.animationDelay = Math.random() * 5 + 's';
+                snowflake.style.opacity = Math.random() * 0.7 + 0.3;
+                snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+                snowflakes.appendChild(snowflake);
+            }
+        }
+        
+        // Inicializar efectos
+        document.addEventListener('DOMContentLoaded', function() {
+            createSnow();
+        });
+    </script>
 </body>
 </html>
