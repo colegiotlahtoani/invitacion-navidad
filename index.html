@@ -29,6 +29,8 @@
             overflow-x: hidden;
             min-height: 100vh;
             font-size: 16px;
+            /* ✨ Mejor visibilidad general del texto */
+            text-shadow: 0 0 4px rgba(255,255,255,0.4);
         }
 
         /* Nieve ligera */
@@ -76,12 +78,16 @@
             color: var(--dorado);
             margin-bottom: 15px;
             line-height: 1.2;
+            /* ✨ Más legible */
+            text-shadow: 0 0 6px rgba(255,255,255,0.65);
         }
         .hero-tagline {
             font-size: 1.2rem;
             color: var(--crema);
             margin-bottom: 25px;
             font-weight: 300;
+            /* 🌟 Mayor claridad */
+            text-shadow: 0 0 6px rgba(255,255,255,0.65);
         }
 
         /* Secciones generales */
@@ -95,6 +101,8 @@
             color: var(--dorado);
             margin-bottom: 30px;
             text-align: center;
+            /* ⭐ Resalta más */
+            text-shadow: 0 0 6px rgba(255,255,255,0.65);
         }
 
         /* Tarjetas unificadas */
@@ -236,7 +244,7 @@
             font-weight: bold;
         }
 
-        /* Sección de alimentos MEJORADA */
+        /* Sección de alimentos */
         .food-section {
             background: rgba(183, 0, 0, 0.1);
             border: 2px solid var(--rojo-navidad);
@@ -308,7 +316,7 @@
             font-size: 1.1rem;
         }
 
-        /* Footer MEJORADO */
+        /* Footer */
         .footer {
             padding: 40px 15px;
             background: linear-gradient(135deg, rgba(15, 61, 15, 0.9), rgba(183, 0, 0, 0.7));
@@ -345,9 +353,7 @@
             .features-grid { flex-direction: row; }
             .food-grid { grid-template-columns: repeat(5, 1fr); }
             .info-grid { flex-direction: row; }
-            .event-image img {
-                max-height: 500px;
-            }
+            .event-image img { max-height: 500px; }
         }
 
         /* Mejoras para pantallas muy pequeñas */
@@ -355,9 +361,7 @@
             .hero h1 { font-size: 1.8rem; }
             .section { padding: 30px 10px; }
             .food-grid { grid-template-columns: 1fr; }
-            .event-image img {
-                max-height: 300px;
-            }
+            .event-image img { max-height: 300px; }
         }
     </style>
 </head>
@@ -405,7 +409,7 @@
         </div>
     </section>
 
-    <!-- ACTIVIDADES INCLUIDAS - ACTUALIZADA -->
+    <!-- ACTIVIDADES INCLUIDAS -->
     <section class="section">
         <div class="event-content">
             <h2 class="section-title">Actividades del Evento</h2>
@@ -438,7 +442,7 @@
         </div>
     </section>
 
-    <!-- ALIMENTOS DISPONIBLES - MEJORADA -->
+    <!-- ALIMENTOS DISPONIBLES -->
     <section class="section">
         <div class="event-content">
             <h2 class="section-title">Alimentos y Bebidas</h2>
@@ -482,7 +486,7 @@
         </div>
     </section>
 
-    <!-- INFORMACIÓN PRÁCTICA - ACTUALIZADA -->
+    <!-- INFORMACIÓN PRÁCTICA -->
     <section class="section">
         <div class="event-content">
             <h2 class="section-title">Información General</h2>
@@ -519,7 +523,7 @@
         </div>
     </section>
 
-    <!-- FOOTER MEJORADO -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-year">Festival Navideño Tlahtoani 2025</div>
         <p class="footer-text">Una celebración creada para compartir la magia de la Navidad</p>
