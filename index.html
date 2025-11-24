@@ -8,8 +8,8 @@
 
 <style>
 
-/* 🌟 RESET */
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Arial,verdana,sans-serif;}
+/* --------------------- 🌟 RESET --------------------- */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Verdana,sans-serif;}
 
 :root{
 --rojo-navidad:#b80000;
@@ -18,7 +18,7 @@
 --azul-noche:#00111f;
 }
 
-/* 🌨️ FONDO */
+/* --------------------- ❄️ FONDO GENERAL --------------------- */
 body{
 background:radial-gradient(circle at top,#032b52,#00111f 75%);
 color:var(--crema);
@@ -27,52 +27,74 @@ overflow-x:hidden;
 text-shadow:0 0 4px rgba(255,255,255,0.4);
 }
 
-/* 🎄 LUCES */
-.luces{position:absolute;top:0;width:100%;height:60px;display:flex;justify-content:space-around;pointer-events:none;}
-.bulb{width:16px;height:22px;border-radius:50%;animation:luces 1s infinite alternate;filter:drop-shadow(0 0 6px);}
-@keyframes luces{from{opacity:0.3;}to{opacity:1;}}
+/* --------------------- 🎄 LUCES NAVIDEÑAS --------------------- */
+.luces{
+position:absolute;
+top:0;
+width:100%;
+height:60px;
+display:flex;
+justify-content:space-around;
+pointer-events:none;
+}
+.bulb{
+width:16px;height:22px;
+border-radius:50%;
+animation:luces 1s infinite alternate;
+filter:drop-shadow(0 0 6px);
+}
+@keyframes luces{
+from{opacity:0.3;transform:translateY(0px);}
+to{opacity:1;transform:translateY(3px);}
+}
+.b1{background:red;}
+.b2{background:yellow;}
+.b3{background:green;}
+.b4{background:cyan;}
+.b5{background:pink;}
 
-.b1{background:red;} .b2{background:yellow;} .b3{background:green;} 
-.b4{background:cyan;} .b5{background:pink;}
-
-/* ✨ BRILLO TITULOS */
-.section-title, .hero h1{animation:brillo 2.8s infinite;}
+/* --------------------- ✨ BRILLO DORADO EN TÍTULOS --------------------- */
+.section-title, .hero h1{
+animation:brillo 2.8s ease-in-out infinite;
+}
 @keyframes brillo{
-0%,100%{text-shadow:0 0 8px rgba(255,255,255,.65),0 0 12px var(--dorado);}
-50%{text-shadow:0 0 2px rgba(255,255,255,.3);}
+0%,100%{text-shadow:0 0 8px rgba(255,255,255,0.65),0 0 12px var(--dorado);}
+50%{text-shadow:0 0 2px rgba(255,255,255,0.3);}
 }
 
-/* ❄️ NIEVE */
-.snowflakes,.snowflakes2{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:10;}
-.snowflake,.flake2{position:absolute;color:white;animation:snow linear infinite;}
+/* --------------------- ❄️ NIEVE 3D --------------------- */
+.snowflakes,.snowflakes2{
+position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:10;
+}
+.snowflake,.flake2{
+position:absolute;color:white;user-select:none;
+animation:snow linear infinite;
+}
 @keyframes snow{to{transform:translateY(120vh) rotate(360deg);}}
 
-/* HEADER */
+/* --------------------- 🎄 HEADER --------------------- */
 .hero{
 background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1543589077-47d81606c1bf')center/cover;
-min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;padding:20px;position:relative;
+min-height:100vh;display:flex;justify-content:center;align-items:center;
+position:relative;text-align:center;padding:20px;
 }
 .hero h1{color:var(--dorado);font-size:2.3rem;}
 .hero-tagline{font-size:1.2rem;margin-top:10px;}
 
-/* SECCIONES */
+/* --------------------- 🏷️ TARJETAS --------------------- */
 .section{padding:45px 15px;}
-.section-title{text-align:center;font-size:1.9rem;color:var(--dorado);margin-bottom:30px;}
-
+.section-title{color:var(--dorado);font-size:1.9rem;margin-bottom:30px;text-align:center;}
 .card{
 background:rgba(255,255,255,0.08);border:1px solid rgba(247,215,116,0.3);
-border-radius:15px;padding:25px;text-align:center;backdrop-filter:blur(5px);
+border-radius:15px;padding:25px 20px;text-align:center;backdrop-filter:blur(5px);
 }
 
-/* 🕒 FECHA Y HORARIO */
-.info-grid{display:flex;flex-direction:column;gap:15px;}
-.info-card i{font-size:2rem;color:var(--dorado);margin-bottom:12px;}
-
-/* 🍽️ ALIMENTOS + HUMO */
+/* --------------------- 🍽️ ALIMENTOS CON HUMO --------------------- */
 .food-zone{position:relative;}
 .humo{
 position:absolute;top:-30px;left:50%;transform:translateX(-50%);
-width:60px;height:60px;background:url('https://i.imgur.com/qo7zSQw.png')center/contain no-repeat;
+width:60px;height:60px;
+background:url('https://i.imgur.com/qo7zSQw.png') center/contain no-repeat;
 opacity:.8;animation:humo 4s linear infinite;
 }
 @keyframes humo{
@@ -81,40 +103,40 @@ opacity:.8;animation:humo 4s linear infinite;
 100%{transform:translate(-50%,-20px) scale(.8);opacity:.3;}
 }
 .food-card{
-background:rgba(255,255,255,0.09);border:1px solid rgba(247,215,116,0.35);
-border-radius:14px;padding:17px;box-shadow:0 4px 10px rgba(0,0,0,.4);
-transition:.3s;text-align:center;
+background:rgba(255,255,255,0.09);
+border:1px solid rgba(247,215,116,0.35);
+border-radius:14px;padding:17px;
+box-shadow:0 4px 10px rgba(0,0,0,.4);
+transition:.3s;
 }
 .food-card:hover{
-transform:scale(1.07);border-color:var(--dorado);box-shadow:0 6px 14px rgba(0,0,0,.55);
+transform:scale(1.07);
+border-color:var(--dorado);
+box-shadow:0 6px 14px rgba(0,0,0,.55);
 }
-.food-card i{
-font-size:2.1rem;color:var(--dorado);margin-bottom:8px;text-shadow:0 0 8px rgba(255,255,255,.5);
-}
+.food-card i{font-size:2.1rem;color:var(--dorado);margin-bottom:8px;text-shadow:0 0 8px rgba(255,255,255,.5);}
 
-/* 🏁 FOOTER */
-footer{text-align:center;padding:40px 15px;background:linear-gradient(135deg,rgba(15,61,15,.9),rgba(183,0,0,.7));border-top:3px solid var(--dorado);}
-footer p{margin:8px 0;}
-footer .footer-year{color:var(--dorado);font-weight:700;font-size:1.2rem;}
-
+/* --------------------- 📱 RESPONSIVE --------------------- */
 @media(min-width:768px){
-.grid{display:flex;gap:20px;flex-wrap:wrap;}
+.grid{display:flex;flex-wrap:wrap;gap:20px;}
 .grid>*{flex:1 1 300px;}
-.info-grid{flex-direction:row;}
+.info-grid{display:flex;gap:15px;}
 }
 
 </style>
 </head>
 <body>
 
-<!-- 🎄 LUCES -->
+<!-- 🎄 LUCES NAVIDEÑAS HEADER -->
 <div class="luces">
-<div class="bulb b1"></div><div class="bulb b2"></div><div class="bulb b3"></div><div class="bulb b4"></div><div class="bulb b5"></div>
-<div class="bulb b1"></div><div class="bulb b3"></div><div class="bulb b2"></div><div class="bulb b4"></div>
+<div class="bulb b1"></div><div class="bulb b2"></div><div class="bulb b3"></div>
+<div class="bulb b4"></div><div class="bulb b5"></div><div class="bulb b2"></div>
+<div class="bulb b1"></div><div class="bulb b3"></div><div class="bulb b4"></div>
 </div>
 
-<!-- ❄️ NIEVE -->
-<div class="snowflakes" id="snowLayer"></div><div class="snowflakes2" id="snowLayer2"></div>
+<!-- ❄️ NIEVE LAYERS -->
+<div class="snowflakes" id="snowLayer"></div>
+<div class="snowflakes2" id="snowLayer2"></div>
 
 <!-- HEADER -->
 <header class="hero">
@@ -124,57 +146,76 @@ footer .footer-year{color:var(--dorado);font-weight:700;font-size:1.2rem;}
 </div>
 </header>
 
-<!-- 🎁 MENSAJE COMUNIDAD -->
+<!-- INFORMACIÓN GENERAL -->
 <section class="section">
-<div class="card">
-<p style="font-size:1.1rem;font-weight:bold;color:var(--dorado);margin-bottom:8px;">Comunidad Tlahtoani</p>
-<p>Pasaremos un momento especial celebrando esta época tan esperada por nuestros pequeños, ¡en familia!</p>
-</div>
+    <h2 class="section-title">Información General</h2>
+
+    <div class="card" style="margin-bottom: 25px;">
+        <p style="font-size: 1.1rem; font-weight: bold; color: var(--dorado); margin-bottom: 8px;">
+            Comunidad Tlahtoani
+        </p>
+        <p>Pasaremos un momento especial celebrando esta época tan esperada por nuestros pequeños, ¡en familia!</p>
+    </div>
+
+    <div class="info-grid">
+
+        <!-- Fecha + horarios -->
+        <div class="card info-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>Fecha</h3>
+            <p style="font-size: 1rem; font-weight: bold;">18 de diciembre 2025</p>
+
+            <hr style="border: none; height: 1px; background: rgba(255,255,255,0.2); margin: 10px 0;">
+
+            <p style="font-size: 0.9rem; margin-bottom: 4px;"><strong>Preescolar:</strong> 10:00 a.m. - 12:00 p.m.</p>
+            <p style="font-size: 0.9rem; margin-bottom: 4px;"><strong>Primaria Menor (2° y 3°):</strong> 5:00 p.m. - 7:00 p.m.</p>
+            <p style="font-size: 0.9rem;"><strong>Primaria Mayor y 1°:</strong> 7:20 p.m. - 9:20 p.m.</p>
+        </div>
+
+        <!-- Boleto -->
+        <div class="card info-card">
+            <i class="fas fa-ticket-alt"></i>
+            <h3>Boleto Extra</h3>
+            <p style="font-weight: bold;">$100 pesos</p>
+            <p style="font-size: 0.85rem;">Puedes traer a toda la familia</p>
+        </div>
+
+        <!-- Regalos -->
+        <div class="card info-card">
+            <i class="fas fa-gift"></i>
+            <h3>Regalos</h3>
+            <p>Bolo 🎁 y regalo navideño</p>
+            <p style="font-size: 0.85rem;">Para cada alumno</p>
+        </div>
+
+        <!-- Fotografías ENFATIZADAS -->
+        <div class="card info-card">
+            <i class="fas fa-camera-retro" style="font-size:2.3rem; color: var(--dorado); margin-bottom: 12px;"></i>
+            <h3>Fotografías</h3>
+
+            <p style="font-weight: bold; margin-bottom: 5px;">📸 Foto con Santa 🎅</p>
+            <p style="font-weight: bold; color: var(--dorado); margin-bottom: 5px;">👨‍👩‍👧‍👦 Foto familiar de estudio</p>
+            
+            <p style="font-size: 0.85rem; opacity: 0.9;">¡Profesional y navideña! 🎄✨</p>
+        </div>
+
+    </div>
 </section>
 
-<!-- 🕒 FECHA Y HORARIOS -->
-<section class="section">
-<h2 class="section-title">Fecha y Horarios</h2>
-<div class="info-grid">
-<div class="card info-card"><i class="fas fa-calendar-day"></i><h3>Evento</h3><p>18 de diciembre 2025</p></div>
-<div class="card info-card"><i class="fas fa-child"></i><h3>Preescolar</h3><p>10:00 a.m. – 12:00 p.m.</p></div>
-<div class="card info-card"><i class="fas fa-school"></i><h3>Primaria Menor</h3><p>2° y 3° · 5:00 p.m. – 7:00 p.m.</p></div>
-<div class="card info-card"><i class="fas fa-users"></i><h3>Primaria Mayor y 1°</h3><p>7:20 p.m. – 9:20 p.m.</p></div>
-</div>
-</section>
+<!-- AQUI IRÍA CUENTACUENTOS, HORARIOS, ACTIVIDADES... (TU DISEÑO YA COMPLETO) -->
 
-<!-- 🎟️ BOLETO + INVITACIÓN -->
-<section class="section">
-<h2 class="section-title">Acceso al Evento</h2>
-<div class="card" style="padding:25px;">
-<i class="fas fa-ticket-alt" style="font-size:2.3rem;color:var(--dorado);margin-bottom:12px;"></i>
-<p style="font-size:1.1rem;font-weight:700;margin-bottom:5px;">Boleto Extra: <span style="color:var(--dorado);">$100</span></p>
-<p>Puedes traer a toda la familia</p>
-</div>
-</section>
-
-<!-- 🎁 SORPRESAS NAVIDEÑAS -->
-<section class="section">
-<h2 class="section-title">Sorpresas Navideñas</h2>
-<div class="grid">
-<div class="card"><i class="fas fa-gift" style="font-size:2.3rem;color:var(--dorado);"></i><h3>Regalos</h3><p>Bolo 🎁 y regalo navideño para cada alumno</p></div>
-<div class="card"><i class="fas fa-camera" style="font-size:2.3rem;color:var(--dorado);"></i><h3>Fotografías</h3><p>Foto con Santa 🎅 y foto familiar de estudio 📸</p></div>
-</div>
-</section>
-
-<!-- 🎭 CUENTACUENTOS -->
-<section class="section">
-<h2 class="section-title">Espectáculo Principal</h2>
-<div class="card"><i class="fas fa-theater-masks" style="font-size:2.3rem;color:var(--dorado);"></i><h3>Cuentacuentos</h3><p>Espectáculo profesional con narración y música en vivo</p></div>
-</section>
-
-<!-- 🍽️ ALIMENTOS -->
+<!-- SECCIÓN DE ALIMENTOS CON HUMO -->
 <section class="section food-zone">
 <h2 class="section-title">Alimentos y Bebidas</h2>
 <div class="humo"></div>
-<div style="background:linear-gradient(135deg,rgba(183,0,0,.18),rgba(247,215,116,.15));border:2px solid var(--dorado);border-radius:18px;padding:25px;">
-<div style="background:var(--rojo-navidad);padding:10px 18px;border-radius:25px;font-weight:700;display:inline-block;box-shadow:0 4px 8px rgba(0,0,0,.35);margin-bottom:15px;">EN VENTA DURANTE EL EVENTO 🎄</div>
-<p style="text-align:center;margin-bottom:20px;">Sabores navideños para disfrutar en familia</p>
+
+<div style="background:linear-gradient(135deg,rgba(183,0,0,.18),rgba(247,215,116,.15));border:2px solid var(--dorado);border-radius:18px;padding:25px 20px;">
+
+<div style="background:var(--rojo-navidad);color:white;padding:10px 18px;border-radius:25px;display:inline-block;font-weight:700;box-shadow:0 4px 8px rgba(0,0,0,.35);margin-bottom:15px;">
+EN VENTA DURANTE EL EVENTO 🎄
+</div>
+
+<p style="text-align:center;margin-bottom:22px;">Sabores navideños para disfrutar en familia</p>
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:15px;">
 <div class="food-card"><i class="fas fa-utensils"></i><p>Tamales</p></div>
@@ -185,19 +226,20 @@ footer .footer-year{color:var(--dorado);font-weight:700;font-size:1.2rem;}
 <div class="food-card"><i class="fas fa-coffee"></i><p>Capuchino</p></div>
 </div>
 
-<p style="margin-top:20px;font-style:italic;color:var(--dorado);font-weight:700;text-align:center;">¡Y mucho más! 🍪☕🍰</p>
+<p style="margin-top:15px;text-align:center;color:var(--dorado);font-weight:bold;font-style:italic;">¡Y mucho más! 🍪☕🍰</p>
 </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-<p class="footer-year">Festival Navideño Tlahtoani 2025</p>
+<footer class="section" style="background:linear-gradient(135deg,rgba(15,61,15,.9),rgba(183,0,0,.7));border-top:3px solid var(--dorado);text-align:center;">
+<p style="color:var(--dorado);font-weight:bold;">Festival Navideño Tlahtoani 2025</p>
 <p>Una celebración creada para compartir la magia de la Navidad</p>
-<p style="color:var(--dorado);font-weight:bold;">¡Te esperamos en Preescolar Tlahtoani!</p>
+<p style="margin-top:10px;font-weight:bold;color:var(--dorado);">¡Te esperamos en Preescolar Tlahtoani!</p>
 </footer>
 
 <script>
-function snow(layer,max,size){
+/* 🌨️ NIEVE 3D */
+function snow(layer, max, size){
 for(let i=0;i<max;i++){
 let s=document.createElement('div');
 s.className=layer==="big"?"snowflake":"flake2";
