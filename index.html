@@ -67,28 +67,58 @@
             z-index: 2;
         }
 
-        /* 🎄 Logo MUCHO MÁS GRANDE + espacio extra */
+        /* 🎄 Logo EXTRA GRANDE con mejoras visuales */
         .festival-logo {
-            width: 200px;
+            width: 280px; /* Aumentado de 200px */
+            height: 280px; /* Añadido para mantener proporción */
+            object-fit: contain;
             margin-bottom: 40px;
-            filter: drop-shadow(0 0 10px rgba(255,255,255,0.7));
+            filter: 
+                drop-shadow(0 0 15px rgba(255,255,255,0.8))
+                drop-shadow(0 0 30px rgba(247,215,116,0.6));
+            transition: transform 0.5s ease, filter 0.5s ease;
+            border-radius: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(247,215,116,0.4);
         }
+        
+        .festival-logo:hover {
+            transform: scale(1.05);
+            filter: 
+                drop-shadow(0 0 20px rgba(255,255,255,0.9))
+                drop-shadow(0 0 40px rgba(247,215,116,0.8));
+        }
+        
         @media (min-width: 768px) {
             .festival-logo {
-                width: 260px;
-                margin-bottom: 55px;
+                width: 380px; /* Aumentado de 260px */
+                height: 380px; /* Añadido para mantener proporción */
+                margin-bottom: 60px; /* Más espacio debajo del logo */
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .festival-logo {
+                width: 450px; /* Tamaño extra grande para pantallas muy grandes */
+                height: 450px;
             }
         }
 
         .hero h1 {
-            font-size: 2rem;
+            font-size: 2.2rem; /* Ligeramente aumentado */
             color: var(--dorado);
-            text-shadow: 0 0 6px rgba(255,255,255,0.65);
+            text-shadow: 0 0 8px rgba(255,255,255,0.7);
+            margin-bottom: 15px;
         }
         .hero-tagline {
-            font-size: 1.2rem;
+            font-size: 1.3rem; /* Ligeramente aumentado */
             margin-top: 12px;
             text-shadow: 0 0 6px rgba(255,255,255,0.65);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Secciones generales */
@@ -145,6 +175,13 @@
             text-decoration: none;
             font-weight: bold;
             margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-watch:hover {
+            background: #ffeb99;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(247,215,116,0.7);
         }
 
         .info-grid { display: flex; flex-direction: column; gap: 15px; margin-top: 30px; }
@@ -176,6 +213,8 @@
             .grid { flex-direction: row; flex-wrap: wrap; }
             .grid > * { flex: 1 1 300px; }
             .info-grid { flex-direction: row; }
+            .hero h1 { font-size: 2.8rem; }
+            .hero-tagline { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -186,9 +225,8 @@
 <!-- HEADER -->
 <header class="hero">
     <div>
-
-        <!-- 🎄 LOGO MUCHO MÁS GRANDE + ESPACIO -->
-        <img src="logo_festival.png" alt="Logo Festival" class="festival-logo">
+        <!-- 🎄 LOGO EXTRA GRANDE con mejoras visuales -->
+        <img src="logo_festival.png" alt="Logo Festival Navideño Tlahtoani" class="festival-logo">
 
         <h1>Festival Navideño Tlahtoani</h1>
         <p class="hero-tagline">Celebra la Navidad con espectáculo, música y tradiciones!!!</p>
@@ -201,7 +239,7 @@
 
     <div class="event-media">
         <div class="event-image">
-            <img src="21_CUENTOS_INF-1.jpg">
+            <img src="21_CUENTOS_INF-1.jpg" alt="Imagen del evento Cuenta Cuentos">
         </div>
 
         <div class="event-video">
