@@ -66,6 +66,20 @@
             position: relative;
             z-index: 2;
         }
+
+        /* 🎄 Logo MUCHO MÁS GRANDE + espacio extra */
+        .festival-logo {
+            width: 200px;
+            margin-bottom: 40px;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.7));
+        }
+        @media (min-width: 768px) {
+            .festival-logo {
+                width: 260px;
+                margin-bottom: 55px;
+            }
+        }
+
         .hero h1 {
             font-size: 2rem;
             color: var(--dorado);
@@ -75,18 +89,6 @@
             font-size: 1.2rem;
             margin-top: 12px;
             text-shadow: 0 0 6px rgba(255,255,255,0.65);
-        }
-
-        /* Logo responsive */
-        .festival-logo {
-            width: 135px;
-            margin-bottom: 18px;
-            filter: drop-shadow(0 0 8px rgba(255,255,255,0.55));
-        }
-        @media (min-width: 768px) {
-            .festival-logo {
-                width: 160px;
-            }
         }
 
         /* Secciones generales */
@@ -163,6 +165,7 @@
             margin-bottom: 8px;
             text-shadow: 0 0 8px rgba(255,255,255,0.45);
         }
+
         .food-card:hover {
             transform: translateY(-5px) scale(1.05);
             box-shadow: 0 6px 14px rgba(0,0,0,0.45);
@@ -184,15 +187,13 @@
 <header class="hero">
     <div>
 
-        <!-- 🎄 LOGO GRANDE Y RESPONSIVE -->
+        <!-- 🎄 LOGO MUCHO MÁS GRANDE + ESPACIO -->
         <img src="logo_festival.png" alt="Logo Festival" class="festival-logo">
 
         <h1>Festival Navideño Tlahtoani</h1>
         <p class="hero-tagline">Celebra la Navidad con espectáculo, música y tradiciones!!!</p>
     </div>
 </header>
-
-<!-- CONTINÚA TODO EXACTAMENTE IGUAL... -->
 
 <!-- EVENTO PRINCIPAL -->
 <section class="main-event">
