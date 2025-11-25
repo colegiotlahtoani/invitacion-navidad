@@ -77,6 +77,18 @@
             text-shadow: 0 0 6px rgba(255,255,255,0.65);
         }
 
+        /* Logo responsive */
+        .festival-logo {
+            width: 135px;
+            margin-bottom: 18px;
+            filter: drop-shadow(0 0 8px rgba(255,255,255,0.55));
+        }
+        @media (min-width: 768px) {
+            .festival-logo {
+                width: 160px;
+            }
+        }
+
         /* Secciones generales */
         .section {
             padding: 50px 15px;
@@ -100,14 +112,12 @@
             text-align: center;
         }
 
-        /* Grid general */
         .grid {
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
 
-        /* Evento */
         .main-event {
             background: linear-gradient(135deg, rgba(183, 0, 0, 0.2), rgba(247,215,116,0.15));
             padding: 40px 15px;
@@ -135,11 +145,9 @@
             margin-top: 10px;
         }
 
-        /* Info práctica */
         .info-grid { display: flex; flex-direction: column; gap: 15px; margin-top: 30px; }
         .info-card i { font-size: 2rem; color: var(--dorado); margin-bottom: 12px; }
 
-        /* Alimentos y bebidas mejorada */
         .food-card {
             background: rgba(255,255,255,0.07);
             border: 1px solid rgba(247,215,116,0.3);
@@ -161,7 +169,6 @@
             border-color: var(--dorado);
         }
 
-        /* Responsive */
         @media (min-width: 768px) {
             .grid { flex-direction: row; flex-wrap: wrap; }
             .grid > * { flex: 1 1 300px; }
@@ -177,14 +184,15 @@
 <header class="hero">
     <div>
 
-        <!-- 🔔 LOGO AGREGADO EN PEQUEÑO -->
-        <img src="logo_festival.png" alt="Logo Festival" 
-             style="width:90px; margin-bottom:15px; filter: drop-shadow(0 0 6px rgba(255,255,255,0.5));">
+        <!-- 🎄 LOGO GRANDE Y RESPONSIVE -->
+        <img src="logo_festival.png" alt="Logo Festival" class="festival-logo">
 
         <h1>Festival Navideño Tlahtoani</h1>
         <p class="hero-tagline">Celebra la Navidad con espectáculo, música y tradiciones!!!</p>
     </div>
 </header>
+
+<!-- CONTINÚA TODO EXACTAMENTE IGUAL... -->
 
 <!-- EVENTO PRINCIPAL -->
 <section class="main-event">
@@ -258,7 +266,7 @@
         <div class="card info-card">
             <i class="fas fa-child"></i>
             <h3>Preescolar</h3>
-            <p>10:00 a.m. a 12:00 p.</p>
+            <p>10:00 a.m. a 12:00 p.m.</p>
         </div>
 
         <div class="card info-card">
