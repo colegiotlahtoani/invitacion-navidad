@@ -55,7 +55,7 @@
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             color: var(--dorado);
             font-weight: 800;
             text-shadow: 0 0 10px rgba(255,255,255,0.6), 0 0 15px rgba(255,215,0,0.4);
@@ -63,7 +63,7 @@
         }
 
         .hero-tagline {
-            font-size: 1.25rem;
+            font-size: 1.20rem;
             font-weight: 600;
             color: #fff;
             max-width: 90%;
@@ -93,8 +93,8 @@
 
         @media (min-width: 768px) {
             .festival-logo { max-width: 340px; }
-            .hero h1 { font-size: 3.2rem; }
-            .hero-tagline { font-size: 1.45rem; }
+            .hero h1 { font-size: 3.3rem; }
+            .hero-tagline { font-size: 1.4rem; }
         }
 
         /* ------------- GENERAL ------------ */
@@ -104,6 +104,8 @@
         .grid { display: flex; flex-direction: column; gap: 20px; }
         .info-grid { display: flex; flex-direction: column; gap: 15px; margin-top: 30px; }
         .info-card i { font-size: 2rem; color: var(--dorado); margin-bottom: 12px; }
+        .food-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(247,215,116,0.3); border-radius: 14px; padding: 18px 10px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.25); transition: 0.3s; }
+        .food-card:hover { transform: translateY(-5px) scale(1.05); border-color: var(--dorado); }
 
         @media (min-width: 768px) { 
             .grid { flex-direction: row; flex-wrap: wrap; } 
@@ -135,4 +137,174 @@
     </a>
 </header>
 
-<!-- *** EL RESTO DE TU PÁGINA SIGUE IGUAL *** -->
+<!-- EVENTO PRINCIPAL -->
+<section class="main-event section">
+    <h2 class="section-title">Cuenta Cuentos</h2>
+
+    <div class="event-media grid">
+        <div class="event-image card">
+            <img src="21_CUENTOS_INF-1.jpg" style="border-radius:15px; width:100%; border:2px solid var(--dorado);">
+        </div>
+
+        <div class="event-video card">
+            <div class="video-container" style="height:180px; position:relative;">
+                <div class="video-overlay" style="position:absolute; top:0; left:0; width:100%; height:100%; background:linear-gradient(45deg, rgba(183,0,0,0.8), rgba(247,215,116,0.3)); display:flex; justify-content:center; align-items:center; flex-direction:column;">
+                    <i class="fas fa-play-circle" style="font-size: 2.5rem; color: var(--dorado); margin-bottom: 10px;"></i>
+                    <p>Conoce nuestro espectáculo</p>
+                    <a href="https://drive.google.com/file/d/13XB_DIgA3rEUW9L6RBlmxh7HwDJMc9dL/view?usp=sharing" class="btn-watch" target="_blank" style="background:var(--dorado); color:var(--azul-noche); padding:10px 20px; border-radius:25px; font-weight:bold; text-decoration:none;">Ver Video</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- INFORMACIÓN GENERAL -->
+<section class="section">
+    <h2 class="section-title">Información General</h2>
+
+    <div class="card" style="margin-bottom: 25px;">
+        <p style="font-size: 1.1rem; font-weight: bold; color: var(--dorado); margin-bottom: 8px;">
+            Comunidad Tlahtoani
+        </p>
+        <p>Pasaremos un momento especial celebrando esta época tan esperada por nuestros pequeños, ¡en familia!</p>
+    </div>
+
+    <div class="info-grid">
+        <div class="card info-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>Fecha</h3>
+            <p>8 de diciembre</p>
+        </div>
+
+        <div class="card info-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Lugar</h3>
+            <p>Explora</p>
+            <p style="font-size:0.85rem;">Av. Tizoc 29-A<br>Cd. del Sol, Zapopan, Jalisco</p>
+        </div>
+
+        <div class="card info-card">
+            <i class="fas fa-ticket-alt"></i>
+            <h3>Boleto Extra</h3>
+            <p>$100 pesos</p>
+            <p style="font-size: 0.85rem;">Puedes traer a toda la familia</p>
+        </div>
+
+        <div class="card info-card">
+            <i class="fas fa-gift"></i>
+            <h3>Regalos</h3>
+            <p>Bolo 🎁 y regalo navideño</p>
+            <p style="font-size: 0.85rem;">Para cada alumno</p>
+        </div>
+
+        <div class="card info-card">
+            <i class="fas fa-camera"></i>
+            <h3>Fotografías</h3>
+            <p>Foto con Santa 🎅</p>
+            <p style="font-size: 0.85rem;">y fotografía familiar de estudio 📸</p>
+        </div>
+    </div>
+</section>
+
+<!-- HORARIOS -->
+<section class="section">
+    <h2 class="section-title">Horarios del Evento</h2>
+
+    <div class="info-grid">
+        <div class="card info-card">
+            <i class="fas fa-child"></i>
+            <h3>Preescolar</h3>
+            <p>5:00 p.m.</p>
+        </div>
+
+        <div class="card info-card">
+            <i class="fas fa-school"></i>
+            <h3>Primaria</h3>
+            <p>7:30 p.m.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ACTIVIDADES -->
+<section class="section">
+    <h2 class="section-title">Actividades del Evento</h2>
+
+    <div class="grid">
+        <div class="card">
+            <i class="fas fa-theater-masks" style="font-size: 2.5rem; color: var(--dorado); margin-bottom: 15px;"></i>
+            <h3 style="color: var(--dorado); margin-bottom: 10px;">Cuenta Cuentos</h3>
+            <p>Espectáculo profesional con narración y música en vivo</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-music" style="font-size: 2.5rem; color: var(--dorado); margin-bottom: 15px;"></i>
+            <h3 style="color: var(--dorado); margin-bottom: 10px;">Villancicos</h3>
+            <p>Presentación musical de nuestros alumnos</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-mug-hot" style="font-size: 2.5rem; color: var(--dorado); margin-bottom: 15px;"></i>
+            <h3 style="color: var(--dorado); margin-bottom: 10px;">Ponche Navideño</h3>
+            <p>Bebida tradicional incluida</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-gifts" style="font-size: 2.5rem; color: var(--dorado); margin-bottom: 15px;"></i>
+            <h3 style="color: var(--dorado); margin-bottom: 10px;">Ambiente Festivo</h3>
+            <p>Decoración y música navideña</p>
+        </div>
+    </div>
+</section>
+
+<!-- ALIMENTOS Y BEBIDAS -->
+<section class="section">
+    <h2 class="section-title">Alimentos y Bebidas</h2>
+
+    <div style="background: linear-gradient(135deg, rgba(183,0,0,0.18), rgba(247,215,116,0.15)); border: 2px solid var(--dorado); border-radius: 18px; padding: 25px 20px;">
+
+        <div style="background: var(--rojo-navidad); color: white; padding: 10px 18px; border-radius: 25px; display: inline-block; font-weight: bold; font-size: 0.95rem; box-shadow: 0 4px 8px rgba(0,0,0,0.35); margin-bottom: 15px;">
+            EN VENTA DURANTE EL EVENTO
+        </div>
+
+        <p style="text-align: center; font-size: 1rem; margin-bottom: 25px;">
+            Sabores navideños para disfrutar en familia
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 15px;">
+            <div class="food-card"><i class="fas fa-utensils"></i><p>Tamales</p></div>
+            <div class="food-card"><i class="fas fa-mug-hot"></i><p>Atole</p></div>
+            <div class="food-card"><i class="fas fa-cookie-bite"></i><p>Buñuelos</p></div>
+            <div class="food-card"><i class="fas fa-birthday-cake"></i><p>Pastel</p></div>
+            <div class="food-card"><i class="fas fa-hotdog"></i><p>Banderillas</p></div>
+            <div class="food-card"><i class="fas fa-coffee"></i><p>Capuchino</p></div>
+        </div>
+
+        <p style="margin-top: 20px; font-style: italic; color: var(--dorado); font-weight: bold; text-align: center; font-size: 1rem;">
+            ¡Y mucho más! 🍪☕🍰
+        </p>
+
+    </div>
+</section>
+
+<!-- ❄ SCRIPT DE NIEVE -->
+<script>
+    function createSnow() {
+        const snowflakes = document.getElementById('snowflakes');
+        const snowflakeCount = 25;
+        for (let i = 0; i < snowflakeCount; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.innerHTML = '❄';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            snowflake.style.animationDelay = Math.random() * 2 + 's';
+            snowflake.style.opacity = Math.random() * 0.5 + 0.3;
+            snowflake.style.fontSize = (Math.random() * 8 + 8) + 'px';
+            snowflakes.appendChild(snowflake);
+        }
+    }
+    document.addEventListener('DOMContentLoaded', createSnow);
+</script>
+
+</body>
+</html>
